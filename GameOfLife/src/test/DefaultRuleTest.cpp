@@ -37,11 +37,8 @@ private:
 
 class DefaultRuleTest: public CppUnit::TestCase {
 public:
-    DefaultRuleTest() :
-            _grid(0) {
-    }
-    virtual ~DefaultRuleTest() {
-    }
+    DefaultRuleTest() : _grid(0) {}
+    virtual ~DefaultRuleTest() {}
     virtual void setUp() {
         _grid = new Grid(10, 10);
         _grid->getCell(4, 4).resurrect();
