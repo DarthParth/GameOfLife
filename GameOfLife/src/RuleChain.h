@@ -14,18 +14,17 @@ using namespace std;
 
 class RuleChain: public Rule {
 public:
-	RuleChain(vector<Rule *> chain) : Rule(), _chain(chain) {}
-	virtual ~RuleChain() {}
-	virtual bool execute (const FiringContext& ctx) const {
-		for(Rule* rule : _chain) {
-			if(rule->execute(ctx))
-				return true;
-		}
-		return true;
-	}
+    RuleChain(vector<Rule *> chain) : Rule(), _chain(chain) {}
+    virtual ~RuleChain() {}
+    virtual bool execute(const FiringContext& ctx) const {
+        for (Rule* rule : _chain) {
+            if (rule->execute(ctx))
+                return true;
+        }
+        return true;
+    }
 private:
-	vector<Rule *> _chain;
-
+    vector<Rule *> _chain;
 
 };
 

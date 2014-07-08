@@ -12,18 +12,18 @@
 
 class KeepCellAliveRule: public DefaultRule {
 public:
-	KeepCellAliveRule() {}
-	virtual ~KeepCellAliveRule() {}
+    KeepCellAliveRule() {}
+    virtual ~KeepCellAliveRule() {}
 
 protected:
 
-	virtual bool _execute(int liveNeighbors, const FiringContext& ctx) const {
-		bool result = (liveNeighbors == 2 || liveNeighbors == 3);
-		result =  result && ctx.getCurrentCell().isAlive();
-		if(result)
-			ctx.getTargetCell().resurrect();
-		return result;
-	}
+    virtual bool _execute(int liveNeighbors, const FiringContext& ctx) const {
+        bool result = (liveNeighbors == 2 || liveNeighbors == 3);
+        result = result && ctx.getCurrentCell().isAlive();
+        if (result)
+            ctx.getTargetCell().resurrect();
+        return result;
+    }
 };
 
 #endif /* KEEPCELLALIVERULE_H_ */

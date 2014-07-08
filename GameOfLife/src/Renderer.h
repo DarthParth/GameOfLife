@@ -13,9 +13,9 @@ using namespace std;
 
 class Renderer {
 public:
-	Renderer() {}
-	virtual ~Renderer() {}
-	virtual void render(const vector<vector<Cell *> >& grid) const = 0;
+    Renderer() {}
+    virtual ~Renderer() {}
+    virtual void render(const vector<vector<Cell *> >& grid) const = 0;
 };
 
 #endif /* RENDERER_H_ */

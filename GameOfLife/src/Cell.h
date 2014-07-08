@@ -10,17 +10,27 @@
 
 class Cell {
 public:
-	Cell(int x, int y) : _alive( false ), _x( x ), _y( y ) {}
-	~Cell() {}
-	void kill() { _alive = false; }
-	void resurrect() { _alive = true; }
-	bool isAlive() const { return _alive; }
-	int getX() const { return _x; }
-	int getY() const { return _y; }
+    Cell(int x, int y) : _alive(false), _x(x), _y(y) {}
+    ~Cell() {}
+    void kill() {
+        _alive = false;
+    }
+    void resurrect() {
+        _alive = true;
+    }
+    bool isAlive() const {
+        return _alive;
+    }
+    int getX() const {
+        return _x;
+    }
+    int getY() const {
+        return _y;
+    }
 private:
-	bool _alive;
-	int _x;
-	int _y;
+    bool _alive;
+    int _x;
+    int _y;
 
 };
 

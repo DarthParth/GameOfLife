@@ -12,17 +12,17 @@
 
 class ResurrectCellRule: public DefaultRule {
 public:
-	ResurrectCellRule() {}
-	virtual ~ResurrectCellRule() {}
+    ResurrectCellRule() {}
+    virtual ~ResurrectCellRule() {}
 
 protected:
 
-	bool _execute(int liveNeighbors, const FiringContext& ctx) const {
-		bool result = (liveNeighbors == 3);
-		if(result)
-			ctx.getTargetCell().resurrect();
-		return result;
-	}
+    bool _execute(int liveNeighbors, const FiringContext& ctx) const {
+        bool result = (liveNeighbors == 3);
+        if (result)
+            ctx.getTargetCell().resurrect();
+        return result;
+    }
 };
 
 #endif /* RESURRECTCELLRULE_H_ */

@@ -13,9 +13,9 @@
 
 class Rule {
 public:
-	Rule() {}
-	virtual ~Rule() {}
-	virtual bool execute( const FiringContext &ctx ) const = 0;
+    Rule() {}
+    virtual ~Rule() {}
+    virtual bool execute(const FiringContext &ctx) const = 0;
 };
 
 #endif /* RULE_H_ */

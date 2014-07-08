@@ -17,20 +17,20 @@ using namespace std;
 
 class N00BRenderer: public Renderer {
 public:
-	N00BRenderer() {}
-	virtual ~N00BRenderer() {}
-	virtual void render(const vector<vector<Cell *> >& grid) const {
-		::system("clear");
-		for(vector<Cell *> row : grid) {
-			for(const Cell *cell : row) {
-				if(cell->isAlive())
-					cout << "* ";
-				else
-					cout << ". ";
-			}
-			cout << endl;
-		}
-	}
+    N00BRenderer() {}
+    virtual ~N00BRenderer() {}
+    virtual void render(const vector<vector<Cell *> >& grid) const {
+        ::system("clear");
+        for (vector<Cell *> row : grid) {
+            for (const Cell *cell : row) {
+                if (cell->isAlive())
+                    cout << "* ";
+                else
+                    cout << ". ";
+            }
+            cout << endl;
+        }
+    }
 };
 
 #endif /* N00BRENDERER_H_ */
