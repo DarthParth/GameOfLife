@@ -29,7 +29,8 @@ public:
             delete _sourceGrid;
         if (_targetGrid)
             delete _targetGrid;
-        delete _renderer;
+        if(_renderer)    
+            delete _renderer;
     }
 
     template<size_t sizeX, size_t sizeY>
